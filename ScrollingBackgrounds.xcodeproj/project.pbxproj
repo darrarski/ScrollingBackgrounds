@@ -560,7 +560,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 00CFFF0124CE1D86B1882601 /* Pods-ScrollingBackgroundsApp.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ScrollingBackgroundsApp/Supporting Files/Info.plist";
@@ -576,7 +575,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 336CF456DE4EB013D09C1491 /* Pods-ScrollingBackgroundsApp.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ScrollingBackgroundsApp/Supporting Files/Info.plist";
