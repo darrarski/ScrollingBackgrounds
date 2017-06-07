@@ -5,4 +5,5 @@ platform :ios, '10.3'
 
 target 'ScrollingBackgroundsApp' do
   pod 'SwiftLint', '~> 0.19'
+  pod 'Reveal-SDK', :configurations => ['Debug']
 end
