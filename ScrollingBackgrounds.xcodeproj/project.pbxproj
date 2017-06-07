@@ -125,6 +125,7 @@
 			buildConfigurationList = 31C10FC61EE826FB00F5C223 /* Build configuration list for PBXNativeTarget "ScrollingBackgroundsApp" */;
 			buildPhases = (
 				DD2DFFBFAF2863B6D11B24EC /* [CP] Check Pods Manifest.lock */,
+				31C10FCD1EE82AB400F5C223 /* SwiftLint */,
 				31C10FB01EE826FB00F5C223 /* Sources */,
 				31C10FB11EE826FB00F5C223 /* Frameworks */,
 				31C10FB21EE826FB00F5C223 /* Resources */,
@@ -187,6 +188,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		31C10FCD1EE82AB400F5C223 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ScrollingBackgroundsApp; ${PODS_ROOT}/SwiftLint/swiftlint";
+		};
 		7E9E64ACFB51882FF091FCBD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
