@@ -7,3 +7,7 @@ target 'ScrollingBackgroundsApp' do
   pod 'SwiftLint', '~> 0.19'
   pod 'Reveal-SDK', :configurations => ['Debug']
 end
+
+target 'ScrollingBackgrounds' do
+  pod 'SwiftLint', '~> 0.19'
+end
