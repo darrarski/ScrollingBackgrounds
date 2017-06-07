@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3147083E1EE8A21F00FA2918 /* BackgroundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3147083D1EE8A21F00FA2918 /* BackgroundController.swift */; };
 		314708411EE8A25400FA2918 /* BackgroundLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314708401EE8A25400FA2918 /* BackgroundLayout.swift */; };
 		31C10FB81EE826FB00F5C223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C10FB71EE826FB00F5C223 /* AppDelegate.swift */; };
 		31C10FBA1EE826FB00F5C223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C10FB91EE826FB00F5C223 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		00CFFF0124CE1D86B1882601 /* Pods-ScrollingBackgroundsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollingBackgroundsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollingBackgroundsApp/Pods-ScrollingBackgroundsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3147083D1EE8A21F00FA2918 /* BackgroundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundController.swift; sourceTree = "<group>"; };
 		314708401EE8A25400FA2918 /* BackgroundLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundLayout.swift; sourceTree = "<group>"; };
 		31C10FB41EE826FB00F5C223 /* ScrollingBackgroundsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollingBackgroundsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C10FB71EE826FB00F5C223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				31C10FE01EE82C9300F5C223 /* Supporting Files */,
 				31C10FE21EE82DC600F5C223 /* ScrollingBackgrounds.swift */,
+				3147083D1EE8A21F00FA2918 /* BackgroundController.swift */,
 				314708401EE8A25400FA2918 /* BackgroundLayout.swift */,
 			);
 			path = ScrollingBackgrounds;
@@ -429,6 +432,7 @@
 			files = (
 				31C10FE31EE82DC600F5C223 /* ScrollingBackgrounds.swift in Sources */,
 				314708411EE8A25400FA2918 /* BackgroundLayout.swift in Sources */,
+				3147083E1EE8A21F00FA2918 /* BackgroundController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
