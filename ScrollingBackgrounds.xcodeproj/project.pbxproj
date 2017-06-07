@@ -18,7 +18,6 @@
 		31C10FD71EE82C7300F5C223 /* ScrollingBackgrounds.h in Headers */ = {isa = PBXBuildFile; fileRef = 31C10FD51EE82C7300F5C223 /* ScrollingBackgrounds.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31C10FDA1EE82C7300F5C223 /* ScrollingBackgrounds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C10FD31EE82C7300F5C223 /* ScrollingBackgrounds.framework */; };
 		31C10FDC1EE82C7300F5C223 /* ScrollingBackgrounds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31C10FD31EE82C7300F5C223 /* ScrollingBackgrounds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		31C10FE31EE82DC600F5C223 /* ScrollingBackgrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C10FE21EE82DC600F5C223 /* ScrollingBackgrounds.swift */; };
 		6216B7C39540DC9732B64593 /* Pods_ScrollingBackgroundsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799B33BEA9F1F92FC0F7E9CA /* Pods_ScrollingBackgroundsApp.framework */; };
 		CA3FC1399BD5ACFA31BA8A96 /* Pods_ScrollingBackgrounds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348B22B609083B3D3F870F25 /* Pods_ScrollingBackgrounds.framework */; };
 /* End PBXBuildFile section */
@@ -62,7 +61,6 @@
 		31C10FD31EE82C7300F5C223 /* ScrollingBackgrounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScrollingBackgrounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C10FD51EE82C7300F5C223 /* ScrollingBackgrounds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollingBackgrounds.h; sourceTree = "<group>"; };
 		31C10FD61EE82C7300F5C223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31C10FE21EE82DC600F5C223 /* ScrollingBackgrounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingBackgrounds.swift; sourceTree = "<group>"; };
 		31C10FE41EE82EB300F5C223 /* ScrollingBackgrounds.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ScrollingBackgrounds.playground; sourceTree = "<group>"; };
 		336CF456DE4EB013D09C1491 /* Pods-ScrollingBackgroundsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollingBackgroundsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollingBackgroundsApp/Pods-ScrollingBackgroundsApp.release.xcconfig"; sourceTree = "<group>"; };
 		348B22B609083B3D3F870F25 /* Pods_ScrollingBackgrounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollingBackgrounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				31C10FE01EE82C9300F5C223 /* Supporting Files */,
-				31C10FE21EE82DC600F5C223 /* ScrollingBackgrounds.swift */,
 				3147083D1EE8A21F00FA2918 /* BackgroundController.swift */,
 				314708401EE8A25400FA2918 /* BackgroundLayout.swift */,
 				314708421EE8A27800FA2918 /* TopBackgroundLayout.swift */,
@@ -436,7 +433,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31C10FE31EE82DC600F5C223 /* ScrollingBackgrounds.swift in Sources */,
 				314708431EE8A27800FA2918 /* TopBackgroundLayout.swift in Sources */,
 				314708411EE8A25400FA2918 /* BackgroundLayout.swift in Sources */,
 				3147083E1EE8A21F00FA2918 /* BackgroundController.swift in Sources */,
