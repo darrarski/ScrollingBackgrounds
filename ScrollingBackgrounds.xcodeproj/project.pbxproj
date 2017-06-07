@@ -11,15 +11,19 @@
 		31C10FBA1EE826FB00F5C223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C10FB91EE826FB00F5C223 /* ViewController.swift */; };
 		31C10FBF1EE826FB00F5C223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31C10FBE1EE826FB00F5C223 /* Assets.xcassets */; };
 		31C10FC21EE826FB00F5C223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C10FC01EE826FB00F5C223 /* LaunchScreen.storyboard */; };
+		6216B7C39540DC9732B64593 /* Pods_ScrollingBackgroundsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799B33BEA9F1F92FC0F7E9CA /* Pods_ScrollingBackgroundsApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00CFFF0124CE1D86B1882601 /* Pods-ScrollingBackgroundsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollingBackgroundsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollingBackgroundsApp/Pods-ScrollingBackgroundsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		31C10FB41EE826FB00F5C223 /* ScrollingBackgroundsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollingBackgroundsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C10FB71EE826FB00F5C223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C10FB91EE826FB00F5C223 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		31C10FBE1EE826FB00F5C223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31C10FC11EE826FB00F5C223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31C10FC31EE826FB00F5C223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		336CF456DE4EB013D09C1491 /* Pods-ScrollingBackgroundsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollingBackgroundsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollingBackgroundsApp/Pods-ScrollingBackgroundsApp.release.xcconfig"; sourceTree = "<group>"; };
+		799B33BEA9F1F92FC0F7E9CA /* Pods_ScrollingBackgroundsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollingBackgroundsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6216B7C39540DC9732B64593 /* Pods_ScrollingBackgroundsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +41,8 @@
 		31C10FAB1EE826FB00F5C223 = {
 			isa = PBXGroup;
 			children = (
+				61F700F327C99295C6C608B8 /* Frameworks */,
+				BFAA7F97A826F456E17F358F /* Pods */,
 				31C10FB51EE826FB00F5C223 /* Products */,
 				31C10FB61EE826FB00F5C223 /* ScrollingBackgroundsApp */,
 			);
@@ -93,6 +100,23 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		61F700F327C99295C6C608B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				799B33BEA9F1F92FC0F7E9CA /* Pods_ScrollingBackgroundsApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFAA7F97A826F456E17F358F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00CFFF0124CE1D86B1882601 /* Pods-ScrollingBackgroundsApp.debug.xcconfig */,
+				336CF456DE4EB013D09C1491 /* Pods-ScrollingBackgroundsApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31C10FC61EE826FB00F5C223 /* Build configuration list for PBXNativeTarget "ScrollingBackgroundsApp" */;
 			buildPhases = (
+				DD2DFFBFAF2863B6D11B24EC /* [CP] Check Pods Manifest.lock */,
 				31C10FB01EE826FB00F5C223 /* Sources */,
 				31C10FB11EE826FB00F5C223 /* Frameworks */,
 				31C10FB21EE826FB00F5C223 /* Resources */,
+				B99426906C8519BDAD69D535 /* [CP] Embed Pods Frameworks */,
+				7E9E64ACFB51882FF091FCBD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +185,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E9E64ACFB51882FF091FCBD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollingBackgroundsApp/Pods-ScrollingBackgroundsApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B99426906C8519BDAD69D535 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollingBackgroundsApp/Pods-ScrollingBackgroundsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD2DFFBFAF2863B6D11B24EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31C10FB01EE826FB00F5C223 /* Sources */ = {
@@ -279,6 +354,7 @@
 		};
 		31C10FC71EE826FB00F5C223 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00CFFF0124CE1D86B1882601 /* Pods-ScrollingBackgroundsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -293,6 +369,7 @@
 		};
 		31C10FC81EE826FB00F5C223 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 336CF456DE4EB013D09C1491 /* Pods-ScrollingBackgroundsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
