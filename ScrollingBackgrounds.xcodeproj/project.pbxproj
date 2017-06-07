@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3147083E1EE8A21F00FA2918 /* BackgroundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3147083D1EE8A21F00FA2918 /* BackgroundController.swift */; };
 		314708411EE8A25400FA2918 /* BackgroundLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314708401EE8A25400FA2918 /* BackgroundLayout.swift */; };
+		314708431EE8A27800FA2918 /* TopBackgroundLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314708421EE8A27800FA2918 /* TopBackgroundLayout.swift */; };
 		31C10FB81EE826FB00F5C223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C10FB71EE826FB00F5C223 /* AppDelegate.swift */; };
 		31C10FBA1EE826FB00F5C223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C10FB91EE826FB00F5C223 /* ViewController.swift */; };
 		31C10FBF1EE826FB00F5C223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31C10FBE1EE826FB00F5C223 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		00CFFF0124CE1D86B1882601 /* Pods-ScrollingBackgroundsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollingBackgroundsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollingBackgroundsApp/Pods-ScrollingBackgroundsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3147083D1EE8A21F00FA2918 /* BackgroundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundController.swift; sourceTree = "<group>"; };
 		314708401EE8A25400FA2918 /* BackgroundLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundLayout.swift; sourceTree = "<group>"; };
+		314708421EE8A27800FA2918 /* TopBackgroundLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBackgroundLayout.swift; sourceTree = "<group>"; };
 		31C10FB41EE826FB00F5C223 /* ScrollingBackgroundsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollingBackgroundsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C10FB71EE826FB00F5C223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C10FB91EE826FB00F5C223 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				31C10FE21EE82DC600F5C223 /* ScrollingBackgrounds.swift */,
 				3147083D1EE8A21F00FA2918 /* BackgroundController.swift */,
 				314708401EE8A25400FA2918 /* BackgroundLayout.swift */,
+				314708421EE8A27800FA2918 /* TopBackgroundLayout.swift */,
 			);
 			path = ScrollingBackgrounds;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31C10FE31EE82DC600F5C223 /* ScrollingBackgrounds.swift in Sources */,
+				314708431EE8A27800FA2918 /* TopBackgroundLayout.swift in Sources */,
 				314708411EE8A25400FA2918 /* BackgroundLayout.swift in Sources */,
 				3147083E1EE8A21F00FA2918 /* BackgroundController.swift in Sources */,
 			);
