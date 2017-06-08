@@ -14,6 +14,7 @@ public class TopBackgroundLayout: BackgroundLayout {
 
     public func setupLayout(for view: UIView, in scrollView: UIScrollView) {
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.layoutIfNeeded()
         let constraints = Constraints(view)
 
         let topConstraint = constraints.topToSuperview
