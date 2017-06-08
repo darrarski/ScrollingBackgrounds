@@ -5,6 +5,7 @@ class ViewController: UITableViewController {
 
     init() {
         super.init(style: .plain)
+        title = "ScrollingBackgrounds"
     }
 
     required init?(coder aDecoder: NSCoder) {
