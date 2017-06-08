@@ -20,6 +20,11 @@ class ViewController: UITableViewController {
             view: topBackgroundView,
             scrollView: tableView
         )
+        centerBackground = BackgroundController(
+            layout: CenterBackgroundLayout(),
+            view: centerBackgroundView,
+            scrollView: tableView
+        )
         bottomBackground = BackgroundController(
             layout: BottomBackgroundLayout(),
             view: bottomBackgroundView,
@@ -34,6 +39,7 @@ class ViewController: UITableViewController {
     }
 
     private var topBackground: BackgroundController?
+    private var centerBackground: BackgroundController?
     private var bottomBackground: BackgroundController?
 
     private lazy var topBackgroundView: UIView = {
@@ -41,6 +47,15 @@ class ViewController: UITableViewController {
         view.backgroundColor = UIColor.blue.withAlphaComponent(0.6)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        return view
+    }()
+
+    private lazy var centerBackgroundView: UIView = {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = UIColor.green.withAlphaComponent(0.6)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        view.widthAnchor.constraint(equalToConstant: 100).isActive = true
         return view
     }()
 
