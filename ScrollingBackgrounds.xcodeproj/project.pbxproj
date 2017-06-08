@@ -169,9 +169,9 @@
 				3147083D1EE8A21F00FA2918 /* BackgroundController.swift */,
 				314708401EE8A25400FA2918 /* BackgroundLayout.swift */,
 				314708441EE8A2A100FA2918 /* BottomBackgroundLayout.swift */,
-				314708421EE8A27800FA2918 /* TopBackgroundLayout.swift */,
 				31B3D9691EE9DF080061017C /* CenterBackgroundLayout.swift */,
 				31B3D96B1EE9FD9B0061017C /* Constraints.swift */,
+				314708421EE8A27800FA2918 /* TopBackgroundLayout.swift */,
 			);
 			path = ScrollingBackgrounds;
 			sourceTree = "<group>";
