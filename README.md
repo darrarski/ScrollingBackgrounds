@@ -8,7 +8,7 @@
 
 ## Description
 
-[`BackgroundController`](ScrollingBackgrounds/BackgroundController.swift) allows to add background views to `UIScrollView`. Each background can have customized layout behaviour, so its position or size updates automatically when scrolling. You can use on of included layouts:
+[`BackgroundController`](ScrollingBackgrounds/BackgroundController.swift) allows to add background views to `UIScrollView`. Each background can have customized layout behaviour, so its position or size updates automatically when scrolling. You can use one of included layouts:
 
 - [`TopBackgroundLayout`](ScrollingBackgrounds/TopBackgroundLayout.swift) - makes background stays on content top
 - [`CenterBackgroundLayout`](ScrollingBackgrounds/CenterBackgroundLayout.swift) - centers the view in visible area
