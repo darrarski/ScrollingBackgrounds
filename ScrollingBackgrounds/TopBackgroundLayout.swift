@@ -1,7 +1,11 @@
 import UIKit
 
+/// Top/header background layout
 public class TopBackgroundLayout: BackgroundLayout {
 
+    /// Instantiate layout
+    ///
+    /// - Parameter inset: optional custom inset, when nil - value from scroll view will be used
     public init(inset: UIEdgeInsets? = nil) {
         self.inset = inset
     }

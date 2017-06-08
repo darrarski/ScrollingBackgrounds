@@ -1,7 +1,11 @@
 import UIKit
 
+/// Centered background layout
 public class CenterBackgroundLayout: BackgroundLayout {
 
+    /// Instantiate layout
+    ///
+    /// - Parameter inset: optional custom inset, when nil - value from scroll view will be used
     public init(inset: UIEdgeInsets? = nil) {
         self.inset = inset
     }

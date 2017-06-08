@@ -1,7 +1,11 @@
 import UIKit
 
+/// Bottom/footer background layout
 public class BottomBackgroundLayout: BackgroundLayout {
 
+    /// Instantiate layout
+    ///
+    /// - Parameter inset: optional custom inset, when nil - value from scroll view will be used
     public init(inset: UIEdgeInsets? = nil) {
         self.inset = inset
     }

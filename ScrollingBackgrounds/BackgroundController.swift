@@ -1,7 +1,14 @@
 import UIKit
 
+/// Scrolling background view controller
 public class BackgroundController: NSObject {
 
+    /// Instantiate controller
+    ///
+    /// - Parameters:
+    ///   - layout: layout for background view
+    ///   - view: background view
+    ///   - scrollView: scroll view to which background view will be added
     public init(layout: BackgroundLayout, view: UIView, scrollView: UIScrollView) {
         self.layout = layout
         self.view = view
