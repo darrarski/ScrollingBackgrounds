@@ -2,6 +2,7 @@
 
 ![Swift v3.1](https://img.shields.io/badge/swift-v3.1-orange.svg)
 ![Platform: iOS](https://img.shields.io/badge/platform-iOS-lightgray.svg)
+[![CocoaPods](https://img.shields.io/cocoapods/v/ScrollingBackgrounds.svg)](https://cocoapods.org/pods/ScrollingBackgrounds)
 
 ![ScrollingBackgrounds screenshot 1](Misc/ScrollingBackgrounds_screenshot_1.gif)
 
