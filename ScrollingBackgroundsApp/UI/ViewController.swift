@@ -1,4 +1,5 @@
 import UIKit
+import ScrollingBackgrounds
 
 class ViewController: UITableViewController {
 
@@ -12,11 +13,44 @@ class ViewController: UITableViewController {
 
     // MARK: View
 
+    override func loadView() {
+        super.loadView()
+        topBackground = BackgroundController(
+            layout: TopBackgroundLayout(),
+            view: topBackgroundView,
+            scrollView: tableView
+        )
+        bottomBackground = BackgroundController(
+            layout: BottomBackgroundLayout(),
+            view: bottomBackgroundView,
+            scrollView: tableView
+        )
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
         tableView.register(Cell.self, forCellReuseIdentifier: Cell.defaultReuseIdentifier)
     }
+
+    private var topBackground: BackgroundController?
+    private var bottomBackground: BackgroundController?
+
+    private lazy var topBackgroundView: UIView = {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = UIColor.blue.withAlphaComponent(0.6)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        return view
+    }()
+
+    private lazy var bottomBackgroundView: UIView = {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = UIColor.red.withAlphaComponent(0.6)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        return view
+    }()
 
     // MARK: UITableViewDataSource
 
