@@ -1,5 +1,4 @@
 import UIKit
-import SnapKit
 
 public class TopBackgroundLayout: BackgroundLayout {
 
@@ -10,11 +9,25 @@ public class TopBackgroundLayout: BackgroundLayout {
     // MARK: BackgroundLayout
 
     public func setupLayout(for view: UIView, in scrollView: UIScrollView) {
-        view.snp.makeConstraints(constraintMaker(forViewIn: scrollView))
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        let topConstraint = self.topConstraint(for: view)
+        topConstraint.constant = top(forViewIn: scrollView)
+        topConstraint.isActive = true
+
+        let leftConstraint = self.leftConstraint(for: view)
+        leftConstraint.constant = left(forViewIn: scrollView)
+        leftConstraint.isActive = true
+
+        let widthConstraint = self.widthConstraint(for: view)
+        widthConstraint.constant = width(forViewIn: scrollView)
+        widthConstraint.isActive = true
     }
 
     public func updateLayout(for view: UIView, in scrollView: UIScrollView) {
-        view.snp.updateConstraints(constraintMaker(forViewIn: scrollView))
+        topConstraint(for: view).constant = top(forViewIn: scrollView)
+        leftConstraint(for: view).constant = left(forViewIn: scrollView)
+        widthConstraint(for: view).constant = width(forViewIn: scrollView)
     }
 
     // MARK: Private
@@ -28,12 +41,24 @@ public class TopBackgroundLayout: BackgroundLayout {
         return scrollView.contentInset
     }
 
-    private func constraintMaker(forViewIn scrollView: UIScrollView) -> (ConstraintMaker) -> Void {
-        return { [unowned self] in
-            $0.top.equalTo(self.top(forViewIn: scrollView))
-            $0.left.equalTo(self.left(forViewIn: scrollView))
-            $0.width.equalTo(self.width(forViewIn: scrollView))
-        }
+    private func topConstraint(for view: UIView) -> NSLayoutConstraint {
+        guard let superview = view.superview else { fatalError() }
+        return superview.constraints
+            .filter { $0.firstAnchor == view.topAnchor && $0.secondAnchor == superview.topAnchor }
+            .first ?? view.topAnchor.constraint(equalTo: superview.topAnchor)
+    }
+
+    private func leftConstraint(for view: UIView) -> NSLayoutConstraint {
+        guard let superview = view.superview else { fatalError() }
+        return superview.constraints
+            .filter { $0.firstAnchor == view.leftAnchor && $0.secondAnchor == superview.leftAnchor }
+            .first ?? view.leftAnchor.constraint(equalTo: superview.leftAnchor)
+    }
+
+    private func widthConstraint(for view: UIView) -> NSLayoutConstraint {
+        return view.constraints
+            .filter { $0.firstAnchor == view.widthAnchor && $0.secondAnchor == nil }
+            .first ?? view.widthAnchor.constraint(equalToConstant: 0)
     }
 
     private func top(forViewIn scrollView: UIScrollView) -> CGFloat {
