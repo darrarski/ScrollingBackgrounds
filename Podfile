@@ -10,5 +10,4 @@ end
 
 target 'ScrollingBackgrounds' do
   pod 'SwiftLint', '~> 0.19'
-  pod 'SnapKit', '~> 3.2'
 end
