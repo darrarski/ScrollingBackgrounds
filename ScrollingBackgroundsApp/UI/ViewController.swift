@@ -34,23 +34,10 @@ class ViewController: UITableViewController {
         ) as? Cell else { fatalError() }
 
         switch indexPath.row {
-        case 0:
-            cell.rectView.backgroundColor = .clear
-            cell.rectView.layer.borderColor = UIColor.darkGray.cgColor
-            cell.rectView.layer.borderWidth = 1
-            cell.label.text = "Header cell"
-        case 1:
-            cell.rectView.backgroundColor = .lightGray
-            cell.rectView.layer.borderColor = UIColor.clear.cgColor
-            cell.rectView.layer.borderWidth = 0
-            cell.label.text = "Content cell"
-        case 2:
-            cell.rectView.backgroundColor = .clear
-            cell.rectView.layer.borderColor = UIColor.darkGray.cgColor
-            cell.rectView.layer.borderWidth = 1
-            cell.label.text = "Footer cell"
-        default:
-            fatalError()
+        case 0: cell.label.text = "Header cell"
+        case 1: cell.label.text = "Content cell"
+        case 2: cell.label.text = "Footer cell"
+        default: fatalError()
         }
 
         return cell

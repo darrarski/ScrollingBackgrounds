@@ -18,13 +18,22 @@ class Cell: UITableViewCell {
 
     // MARK: Subviews
 
-    let rectView = UIView(frame: .zero)
     let label = UILabel(frame: .zero)
 
     private func loadSubviews() {
         contentView.addSubview(rectView)
+        rectView.addSubview(blurView)
         rectView.addSubview(label)
     }
+
+    private let rectView: UIView = {
+        let view = UIView(frame: .zero)
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.lightGray.cgColor
+        return view
+    }()
+
+    private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
 
     // MARK: Layout
 
@@ -36,10 +45,17 @@ class Cell: UITableViewCell {
         rectView.rightAnchor.constraint(equalTo: rectViewSuperview.rightAnchor, constant: -16).isActive = true
         rectView.bottomAnchor.constraint(equalTo: rectViewSuperview.bottomAnchor, constant: -16).isActive = true
 
+        guard let blurViewSuperview = blurView.superview else { fatalError() }
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        blurView.topAnchor.constraint(equalTo: blurViewSuperview.topAnchor).isActive = true
+        blurView.leftAnchor.constraint(equalTo: blurViewSuperview.leftAnchor).isActive = true
+        blurView.rightAnchor.constraint(equalTo: blurViewSuperview.rightAnchor).isActive = true
+        blurView.bottomAnchor.constraint(equalTo: blurViewSuperview.bottomAnchor).isActive = true
+
         guard let labelSuperview = label.superview else { fatalError() }
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerXAnchor.constraint(equalTo: labelSuperview.centerXAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: labelSuperview.centerYAnchor).isActive = true
     }
-    
+
 }
