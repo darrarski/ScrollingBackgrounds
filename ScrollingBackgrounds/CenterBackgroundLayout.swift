@@ -10,19 +10,21 @@ public class CenterBackgroundLayout: BackgroundLayout {
 
     public func setupLayout(for view: UIView, in scrollView: UIScrollView) {
         view.translatesAutoresizingMaskIntoConstraints = false
+        let constraints = Constraints(view)
 
-        let centerXconstraint = self.centerXconstraint(for: view)
+        let centerXconstraint = constraints.centerX
         centerXconstraint.constant = centerX(forViewIn: scrollView)
         centerXconstraint.isActive = true
 
-        let centerYconstraint = self.centerYconstraint(for: view)
+        let centerYconstraint = constraints.centerY
         centerYconstraint.constant = centerY(forViewIn: scrollView)
         centerYconstraint.isActive = true
     }
 
     public func updateLayout(for view: UIView, in scrollView: UIScrollView) {
-        centerXconstraint(for: view).constant = centerX(forViewIn: scrollView)
-        centerYconstraint(for: view).constant = centerY(forViewIn: scrollView)
+        let constraints = Constraints(view)
+        constraints.centerX.constant = centerX(forViewIn: scrollView)
+        constraints.centerY.constant = centerY(forViewIn: scrollView)
     }
 
     // MARK: Private
@@ -34,20 +36,6 @@ public class CenterBackgroundLayout: BackgroundLayout {
             return inset
         }
         return scrollView.contentInset
-    }
-
-    private func centerXconstraint(for view: UIView) -> NSLayoutConstraint {
-        guard let superview = view.superview else { fatalError() }
-        return superview.constraints
-            .filter { $0.firstAnchor == view.centerXAnchor && $0.secondAnchor == superview.centerXAnchor }
-            .first ?? view.centerXAnchor.constraint(equalTo: superview.centerXAnchor)
-    }
-
-    private func centerYconstraint(for view: UIView) -> NSLayoutConstraint {
-        guard let superview = view.superview else { fatalError() }
-        return superview.constraints
-            .filter { $0.firstAnchor == view.centerYAnchor && $0.secondAnchor == superview.centerYAnchor }
-            .first ?? view.centerYAnchor.constraint(equalTo: superview.centerYAnchor)
     }
 
     private func centerX(forViewIn scrollView: UIScrollView) -> CGFloat {
