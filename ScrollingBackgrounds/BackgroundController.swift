@@ -30,22 +30,29 @@ public class BackgroundController: NSObject {
 
     // MARK: KVO
 
+    private var contentOffsetObserver: NSKeyValueObservation?
+    private var contentSizeObserver: NSKeyValueObservation?
+    private var contentInsetObserver: NSKeyValueObservation?
+
     private func setupObservers() {
-        scrollView.addObserver(self, forKeyPath: #keyPath(UIScrollView.contentOffset), options: [.new], context: nil)
-        scrollView.addObserver(self, forKeyPath: #keyPath(UIScrollView.contentSize), options: [.new], context: nil)
-        scrollView.addObserver(self, forKeyPath: #keyPath(UIScrollView.contentInset), options: [.new], context: nil)
+        contentOffsetObserver = scrollView.observe(\UIScrollView.contentOffset, options: [.new]) { [weak self] _, _ in
+            self?.updateLayout()
+        }
+        contentSizeObserver = scrollView.observe(\UIScrollView.contentSize, options: [.new]) { [weak self] _, _ in
+            self?.updateLayout()
+        }
+        contentInsetObserver = scrollView.observe(\UIScrollView.contentInset, options: [.new]) { [weak self] _, _ in
+            self?.updateLayout()
+        }
     }
 
     private func removeObservers() {
-        scrollView.removeObserver(self, forKeyPath: #keyPath(UIScrollView.contentOffset))
-        scrollView.removeObserver(self, forKeyPath: #keyPath(UIScrollView.contentSize))
-        scrollView.removeObserver(self, forKeyPath: #keyPath(UIScrollView.contentInset))
+        contentOffsetObserver = nil
+        contentSizeObserver = nil
+        contentInsetObserver = nil
     }
 
-    override public func observeValue(forKeyPath keyPath: String?,
-                                      of object: Any?,
-                                      change: [NSKeyValueChangeKey : Any]?,
-                                      context: UnsafeMutableRawPointer?) {
+    private func updateLayout() {
         layout.updateLayout(for: view, in: scrollView)
     }
 
