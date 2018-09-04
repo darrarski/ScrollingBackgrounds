@@ -1,15 +1,20 @@
 PODS:
-  - Reveal-SDK (8)
-  - SwiftLint (0.19.0)
+  - Reveal-SDK (17)
+  - SwiftLint (0.27.0)
 
 DEPENDENCIES:
   - Reveal-SDK
   - SwiftLint (~> 0.19)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Reveal-SDK
+    - SwiftLint
+
 SPEC CHECKSUMS:
-  Reveal-SDK: 43be4e662864e937960d0d04d005135e29c4e53b
-  SwiftLint: 3537a05b34060e78e7510f04fb7537d738247803
+  Reveal-SDK: a6df49f47319bd19a110c960c498af32df72c0af
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
 PODFILE CHECKSUM: dcdb1be2061a73b2ec7f06da535212583ee11ab3
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
